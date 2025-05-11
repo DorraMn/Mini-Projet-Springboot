@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="../components/layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+   <div class="sidebar">
+    <a href="../accueil/accueil.html"><i class="fas fa-home" style="color: gray; margin-right: 8px;"></i>Accueil</a>
+    <a href="../product/index.html"><i class="fas fa-boxes" style="color: gray; margin-right: 8px;"></i>Gérer Produits</a>
+    <a href="../entrepot/entrepot.html"><i class="fas fa-warehouse" style="color: gray; margin-right: 8px;"></i>Gérer Entrepôt</a>
+    <a href="../stock/stock.html"><i class="fas fa-layer-group" style="color: gray; margin-right: 8px;"></i>Gérer Stock</a>
+    <a href="../mouvement de stock/index.html"><i class="fas fa-exchange-alt" style="color: gray; margin-right: 8px;"></i>Mouvement Stock</a>
+
+    <button class="custom-btn" onclick="logout()">
+        <i class="fas fa-sign-out-alt" style="color: gray; margin-right: 8px;"></i>Se déconnecter
+    </button>
+</div>
+<script>
+function logout() {
+    localStorage.removeItem("nomUtilisateur");
+    window.location.href = "../compte/login.html";
+}
+</script>
+</body>
+</html>

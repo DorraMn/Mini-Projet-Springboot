@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des Mouvements de Stock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barre de navigation -->
+   <div id="navbar"></div>
+
+   <!-- Barre latérale -->
+   <div id="sidebar"></div>
+
+
+ <br><br><br><br>
+    
+
+    <section>
+        <h2> 🔄 Ajouter un Mouvement</h2>
+        <form id="mouvementForm">
+            <input type="hidden" id="mouvementId">
+            <label for="produit">Produit:</label>
+            <select id="produit" required></select>
+
+            <label for="entrepot">Entrepôt:</label>
+            <select id="entrepot" required></select>
+
+            <label for="type">Type:</label>
+            <select id="type">
+                <option value="ENTREE">Entrée</option>
+                <option value="SORTIE">Sortie</option>
+            </select>
+
+            <label for="quantite">Quantité:</label>
+            <input type="number" id="quantite" required>
+
+            <button  class="green-btn" type="submit">Enregistrer</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Liste des Mouvements</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Produit</th>
+                    <th>Type</th>
+                    <th>Quantité</th>
+                    <th>Date</th>
+                    <th>Entrepôt</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="mouvementsTableBody"></tbody>
+        </table>
+    </section>
+
+    <!-- Popup modification -->
+    <div id="editPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="fermerPopup()">&times;</span>
+            <form id="editForm">
+                <input type="hidden" id="editId">
+                <label for="editProduit">Produit:</label>
+                <select id="editProduit" required></select>
+
+                <label for="editEntrepot">Entrepôt:</label>
+                <select id="editEntrepot" required></select>
+
+                <label for="editType">Type:</label>
+                <select id="editType">
+                    <option value="ENTREE">Entrée</option>
+                    <option value="SORTIE">Sortie</option>
+                </select>
+
+                <label for="editQuantite">Quantité:</label>
+                <input type="number" id="editQuantite" required>
+
+                <button type="submit">Modifier</button>
+            </form>
+        </div>
+    </div>
+
+
+
+     <!-- Pied de page -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="../components/layout.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

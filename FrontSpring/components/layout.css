@@ -1,0 +1,102 @@
+/* === Réinitialisation de base === */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  /* === Barre de navigation (top) === */
+  .navbar {
+    height: 60px;
+    width: 100%;
+    background-color: #1976d2;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* === Barre latérale (sidebar) === */
+  .sidebar {
+    position: fixed;
+    top: 60px; /* sous la navbar */
+    left: 0;
+    width: 200px;
+    height: calc(100% - 60px);
+    background-color: #f4f4f4;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+  }
+  
+  .sidebar a {
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .sidebar a:hover {
+    background-color: #ddd;
+    color: #1976d2;
+  }
+  
+  /* === Contenu principal === */
+  .main-content {
+    margin-left: 200px; /* espace pour la sidebar */
+    margin-top: 60px;   /* espace pour la navbar */
+    padding: 20px;
+  }
+  
+
+
+
+  /*bouton de déconnexion*/
+
+  .custom-btn {
+  background-color: transparent;
+ padding: 12px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+margin-top: 290px;
+  border: none; /* enlève les bordures */
+  outline: none; /* enlève la bordure de focus */
+  
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.custom-btn:hover {
+  background-color: #a52222;
+  color: white;}
+
+
+
+
+  .logo {
+    width: 130px; /* ou la taille qui te convient */
+    height: auto;
+    margin-top: 5px;
+    margin-right: 70px ;
+}
+
+.navbar-title {
+    font-family: 'Calibri Light', 'Segoe UI', sans-serif; /* Police élégante et légère */
+    font-size: 30px; /* Réduit la taille du texte */
+    font-weight: 00; /* Optionnel, pour rendre le texte plus fin */
+    color: #ffffff; /* Couleur de texte plus douce */
+    margin: 0;
+}

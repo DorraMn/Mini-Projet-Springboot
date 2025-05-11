@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../logo/entrepot1.jpg') ;
+    background-size: cover;
+}
+
+.container {
+    background: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+    width: 300px;
+    text-align: center;
+    
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin: 1em 0;
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 0.8em;
+    width: 100%;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6aa4de;
+}
+
+p {
+    color: blue;
+    margin-top: 10px;
+}
+
+a {
+    color:#8a8787;
+    text-decoration: none;
+    font-size: 14px;
+} ;

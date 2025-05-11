@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil - Alertes Stock</title>
+    <link rel="stylesheet" href="../components/layout.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <div id="navbar"></div>
+
+        <!-- Sidebar -->
+        <div id="sidebar"></div>
+
+        <!-- Contenu principal -->
+        <div class="main-content part middle">
+            
+            <!-- Alertes de Stock en haut -->
+            <h2> ⚠️ Alertes de Stock</h2>
+            <div id="alertesContainer">Chargement des alertes...</div>
+
+            <!-- Ligne avec les deux cartes : Produits & Entrepôts -->
+            <div class="card-row">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Nombre total de produits</h3>
+                        <p><span id="nbProduits">...</span></p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Nombre d'entrepôts</h3>
+                        <p><span id="nbEntrepots">...</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ligne avec tableau + pie chart -->
+            <div class="grid-row">
+                <!-- Tableau des capacités -->
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Capacité restante des entrepôts</h3>
+                        <br/>
+                        <div class="table-container">
+                            <table id="capaciteRestanteTable" class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Nom de l'entrepôt</th>
+                                        <th>Capacité</th>
+                                        <th>Capacité restante</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Données insérées dynamiquement -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pie Chart -->
+                <div class="chart-card">
+                    <h3>Répartition des produits selon les catégories</h3>
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+
+
+
+        
+        <!-- Scripts -->
+        <script src="../components/layout.js"></script>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

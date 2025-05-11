@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion des Entrepôts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <!-- Barre de navigation -->
+   <div id="navbar"></div>
+
+   <!-- Barre latérale -->
+   <div id="sidebar"></div>
+
+
+ <br><br><br><br>
+ <h2> 🏭 Ajouter un Entrepôt</h2>
+  <form id="entrepotForm">
+    <input type="hidden" id="entrepotId">
+    <input type="text" id="nom" placeholder="Nom de l'entrepôt" required>
+    <input type="text" id="adresse" placeholder="Adresse" required>
+    <input type="number" id="capacite" placeholder="Capacité" required>
+    <button   class="green-btn" type="submit">Enregistrer</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Adresse</th>
+        <th>Capacité</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="entrepotTableBody"></tbody>
+  </table>
+
+  <!-- Modal de modification -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+     
+      <form id="editForm">
+        <input type="hidden" id="editId">
+        <input type="text" id="editNom" required>
+        <input type="text" id="editAdresse" required>
+        <input type="number" id="editCapacite" required>
+        <button type="submit">Mettre à jour</button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Pied de page -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="../components/layout.js"></script>
+  <script src="entrepot.js"></script>
+</body>
+</html>

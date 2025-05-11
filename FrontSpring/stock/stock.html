@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion des Stocks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <div id="navbar"></div>
+
+    <!-- Barre latérale -->
+    <div id="sidebar"></div>
+    <br><br><br><br>
+
+  <h2> 🗂️Gestion des Stocks</h2>
+
+  <form id="stockForm">
+    <input type="hidden" id="stockId">
+    <label for="produitSelect">Produit :</label>
+    <select id="produitSelect" required></select>
+
+    <label for="entrepotSelect">Entrepôt :</label>
+    <select id="entrepotSelect" required></select>
+
+    <input type="number" id="quantite" placeholder="Quantité" required>
+    <input type="number" id="seuilAlerte" placeholder="Seuil d'alerte" required>
+    <button  class="green-btn" type="submit">Enregistrer</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Produit</th>
+        <th>Entrepôt</th>
+        <th>Quantité</th>
+        <th>Seuil d'alerte</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="stockTableBody"></tbody>
+  </table>
+
+
+
+
+
+
+
+
+<!-- Fenêtre Popup pour modifier un stock -->
+<div id="popupModal" class="popup-modal">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h2>Modifier un stock</h2>
+    <form id="popupStockForm">
+      <input type="hidden" id="popupStockId">
+      <label for="popupProduitSelect">Produit :</label>
+      <select id="popupProduitSelect" required></select>
+
+      <label for="popupEntrepotSelect">Entrepôt :</label>
+      <select id="popupEntrepotSelect" required></select>
+
+      <input type="number" id="popupQuantite" placeholder="Quantité" required>
+      <input type="number" id="popupSeuilAlerte" placeholder="Seuil d'alerte" required>
+      <button type="submit">Enregistrer</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- Pied de page -->
+<div id="footer"></div>
+
+
+
+
+ <script src="../components/layout.js"></script>
+  <script src="stock.js"></script>
+</body>
+</html>

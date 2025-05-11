@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion des Produits</title>
+  <link rel="stylesheet" href="../components/layout.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Barre de navigation -->
+  <div id="navbar"></div>
+
+  <!-- Barre latérale -->
+  <div id="sidebar"></div>
+
+  <h1> Gestion des Produits</h1>
+
+ 
+
+ <!-- Formulaire d'ajout de produit directement visible -->
+<section id="addProductSection">
+  <h2> 📦 Ajouter un Produit</h2>
+  <form id="produitForm">
+    <input type="text" id="nom" placeholder="Nom du produit" required>
+    <input type="text" id="categorie" placeholder="Catégorie" required>
+    <input type="number" id="prix" placeholder="Prix" required>
+    <input type="number" id="seuilMin" placeholder="Seuil Min" required>
+    <input type="text" id="fournisseur" placeholder="Fournisseur" required>
+    <button  class="green-btn"  type="submit">Ajouter</button>
+  </form>
+</section>
+
+
+  <!-- Tableau des produits -->
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Catégorie</th>
+        <th>Prix</th>
+        <th>Seuil</th>
+        <th>Fournisseur</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="produitTableBody"></tbody>
+  </table>
+
+  <!-- Modal de modification -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+     
+      <form id="editForm">
+        <input type="hidden" id="editId">
+        <input type="text" id="editNom" required>
+        <input type="text" id="editCategorie" required>
+        <input type="number" id="editPrix" required>
+        <input type="number" id="editSeuilMin" required>
+        <input type="text" id="editFournisseur" required>
+        <button type="submit">Mettre à jour</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Notification -->
+  <div id="notification"></div>
+
+  <!-- Pied de page -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="../components/layout.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
