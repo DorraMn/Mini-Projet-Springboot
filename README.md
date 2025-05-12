@@ -100,8 +100,9 @@ docker run -p 8080:80 front-jee-app
 
 ### 🔗 Accès à l’application
 
-- 🌍 Frontend : [http://localhost:8080](http://localhost:8080)  
-- 🛠️ Backend : [http://localhost:9090](http://localhost:9090) *(API REST)*
+- 🌍 Frontend : [http://localhost:30000](http://localhost:8080)  
+- 🛠️ Backend : [http://localhost:30080 ](http://localhost:9090) *(API REST)*
+→ Spring Boot
 
 ---
 
